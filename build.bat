@@ -1,0 +1,1 @@
+cxfreeze resize.py
