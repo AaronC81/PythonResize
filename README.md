@@ -19,6 +19,21 @@ resize image.png -l sizes.csv
 | `--list` or `-l`:   | Specify a CSV list of sizes to be used to resize the image into. |
 
 ##Using `--list`
+You can make a CSV list of widths and heights to resize an image into many different sizes. For example, we could make a file called `icons.csv` with this inside:
+```
+512,512
+192,192
+144,144
+92,92
+72,72
+48,48
+36,36
+```
+If you then ran this:
+```
+resize icon.png --list icons.csv
+```
+It would generate 7 new image files, one of which is 512x512, one of which is 192x192, etc. This is very useful if you need to make an icon or image lots of different sizes for different screen densities.
 
 ##Building from source
 **NOTE:** This might work on lower versions of Python than 3.4, but that hasn't been tested, so 3.4 is recommended. Also, this hasn't been tested on OSes other than Windows.
